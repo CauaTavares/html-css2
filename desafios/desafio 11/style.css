@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root {
+    --font1: Verdana,  Geneva, Tahoma, sans-serif;
+    --font2: 'Passion One', cursive;
+    --font3: 'Sriracha', cursive;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: black url(background001.jpg) center center no-repeat fixed;
+    background-size: cover;
+}
+
+header {
+    background-color: black;
+    min-height: 280px;
+    text-align: center;
+}
+
+header > h1 {
+    color: aliceblue;
+    font-family: var(--font2);
+    padding-top: 50px;
+    font-size: 7em;
+    font-weight: bolder;
+}
+
+header > p {
+    font-family: var(--font1);
+    color: aliceblue;
+    padding: 20px 0px;
+}
+
+.paragrafo {
+    height: auto;
+    background-color: aliceblue;
+    box-shadow: 5px 7px 10px rgba(0, 0, 0, 0.342);
+}
+
+.paragrafo > p {
+    width: 40%;
+    padding: 60px 30px;
+}
+
+.imagem {
+    width: 40%;
+    margin: 60px 30px;
+    background-color: rgba(0, 0, 0, 0.386);
+}
+
+.imagem > p {
+    width: 100%;
+    color: aliceblue;
+}
+
+div > p {
+    max-width: 100%;
+    font-family: 'Passion One', cursive;
+    color: black;
+    font-size: 3em;
+    line-height: 2.1em;
+}
+
+a {
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+
+footer {
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    text-align: center;
+    font-size: 1em;
+    padding: 10px;
+}
+
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
