@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h1>Form Example</h1>
+    <form action="register.php" method="post" autocomplete="on">
+        <p>
+            <label for="ista">States:</label>
+            <select name="states" id="ista">
+
+                <option value="" selected>---- Escolha ---</option>
+                <optgroup label="Southeast regian">
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP" selected>São Paulo</option>
+                </optgroup>
+
+                <optgroup label="Northeast regian">
+                    <option value="MA">Maranhão</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                </optgroup>
+            </select>
+        </p>
+
+        <p>
+            <label for="iprof">profession:</label>
+            <input type="text" name="prof" id="iprof">
+            <datalist id="lstprof">
+                <option>Administrator</option>
+                <option>Accountant</option>
+                <option>Developer</option>
+                <option>Teacher</option>
+            </datalist>
+        </p>
+
+        <p>
+            <label for="imsg">Message: </label><br>
+            <textarea name="msg" id="imsg" cols="30" rows="10">Your message here...</textarea>
+        </p>
+
+        <p>
+            <input type="submit" value="Send">
+            <input type="reset" value="Clean">
+        </p>
+    </form>
+</body>
+</html>
