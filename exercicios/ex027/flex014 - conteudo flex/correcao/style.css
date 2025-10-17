@@ -1,0 +1,81 @@
+* {
+    margin: 0;                  /* Tira os estilos padrões do navegador */
+    padding: 0;                 /* tira os estilos padrões do navegador */
+    box-sizing: border-box;        /* Cada navegador tem suas medidas padrão isso é para removelas */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;          /* Define os estilos da fonte */
+    font-size: 1em;                                     /* Tamanho da fonte */
+    line-height: 1.5em;                                 /* Define a altura da fonte  */
+}
+
+p {
+    margin-bottom: 10px;    /* Serve para dar margem em baixo  */
+    text-align: justify;    /* Alinha às duas margens, ajustando o espaçamento entre palavras */
+}
+
+h1, h2 {
+    margin-bottom: 20px; /* Serve para dar margem em baixo */
+    line-height: 1.2em;     /* Serve para definir a altura da fonte */
+    text-align: left;       /* Alinha o texto na ESQUERDA */
+}
+
+header, section.normal {
+    padding: 20px;      /* Preenchimento interno */
+}
+
+
+section.flex-content {
+    padding: 20px;                  /* Preenchimento interno */
+    background-color: rgb(216, 213, 251); 
+
+    display: flex;                  /* Sempre começar com DISPLAY: FLEX */
+    flex-flow: column nowrap;       /* Elemento PAI está EM COLUNA, e NÃO vai QUEBRAR (NOWRAP) */
+}
+
+article.media-text {
+    display: flex;                   /* Sempre começar com DISPLAY: FLEX */
+    flex-flow: row wrap-reverse;        /* Elemento FILHO está em LINHA(ROW), e VAI QUEBRAR (WRAP)  */
+    justify-content: space-between;     /* Serve para grudar os itens nos cantos */
+}
+
+article.text-media {
+    display: flex;                    /* Sempre começar com DISPLAY: FLEX */
+    flex-flow: row wrap;                /* Elemento FILHO está em LINHA(ROW), e VAI QUEBRAR (WRAP) */
+    justify-content: space-between;    /* Serve para grudar os itens nos cantos */
+}   
+
+article > div.text {
+    /*
+    flex-grow: Significa que vai crescer normalmente
+
+    flex-shrink: Significa que vai encolher normalmente
+    
+    flex-basis: Serve para definir um tamanho inicial de um item flexível 
+    */
+    flex: 1 1 500px;         /* Isso faz com que a a DIV quebre com 500px e vá para cima */
+    /*
+        flex-grow, flex-shrink, flex-basis
+
+        NESSA ORDEM
+    */
+}
+
+article > div.media {
+    flex: 1 0 400px; /* Isso faz com que a a DIV quebre com 500px e vá para cima */
+
+}
+
+div.media > img {
+    display: block;  /* Serve para ocupar toda a largura disponivel */
+    margin: auto;      /* Serve para centralizar um conteúdo (não é muito recomendado) */
+    width: 15rem;       /* Define a LARGURA */
+    padding: 10px;      /* Preenchimento interno */
+}
+
+div.media > iframe {
+    display: block;     /* Serve para ocupar toda a largura disponivel */
+    margin: auto;       /* Serve para centralizar um conteúdo (não é muito recomendado) */
+    width: 90%;         /* Define a LARGURA */
+}

@@ -6,17 +6,19 @@
     <title>Flex Box</title>
     <style>
         div.container {
-            background-color: red;
+            background-color: red;      
 
-            display: flex;
+            display: flex;  /* SEMPRE COMEÇAR COM DISPLAY: FLEX*/
         }
 
         div.item {
-            background-color: lightskyblue;
-            border: 1px solid black;
-            text-align: center;
+            background-color: lightskyblue;    
 
-            flex: auto;
+            border: 1px solid black;          /*Adiciona uma borda ajuda a saber o limite ca CAIXA*/
+
+            text-align: center;  /* Centraliza os textos(IMAGEM) no centro*/
+
+            flex: auto; /* flex: auto faz com que um item flex cresça para preencher o espaço disponível, encolha para caber no seu contentor, e tenha um tamanho inicial baseado no seu conteúdo. */
         }
     </style>
 </head>
