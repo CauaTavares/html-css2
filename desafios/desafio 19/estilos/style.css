@@ -1,0 +1,280 @@
+@charset "UTF-8";
+/* -------------- (ESTILIZAÇÕES GERAIS) ------------- */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --fundo-principal: #f5f5f5;
+  --texto: #222222;
+  --texto-inverso: #fff;
+  --destaque: #0077ff;
+  --destaque-inverso: #66bbff;
+  --fundo-card: #fff;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--fundo-principal);
+  color: var(--texto);
+}
+
+
+/* -------------- (INICIO DA SECTION CEBECALHO) ------------- */
+
+
+header {
+  background-color: var(--destaque);
+
+  display: flex;            /* Sempre começar com DISPLAY:FLEX NO PAI */
+
+  flex-direction: row;    /* Deixa em linha */
+
+  justify-content: end;   /* Força o elemento a ficar na DIREITA */
+
+  padding: .5rem;
+  /* ----------------------------- ( COMO DEIXAR HEADER FIXO NO TOPO ) ---------------------------- */
+
+  position: sticky;        /* Faz com que o elemento fique GRUDADO mesmo com a rolagem */
+  top: 0;                 /* Força o elemento a ficar no TOPO */
+  z-index: 1;             /* Mexe na profundidade assim o elemento fique por cima dos outros */
+  width: 100%;            /* Garante que vai ocupar toda a tela */
+}
+
+#menu ul {          /* Estilizando o header (Aplicar estilo no pai primeiro) */
+
+  display: flex;      /* Dar DISPLAY:FLEX  depois de aplicar os estilos no filho*/
+
+  gap: 2rem;          /* Espaçamento entre os itens */
+
+  list-style: none;   /* Tira os estilos da lista */
+}
+
+#menu a { 
+  display: flex;
+
+
+  text-decoration: none;          /* Tira o estilo do link */
+
+  color: var(--texto-inverso);
+  padding: .5rem;
+  border-radius: .5rem;
+
+  transition: background-color .5s, color .5s;    /* Deixa suave os efeitos (USAR SEMPRE COM HOVER) */
+}
+
+#menu a:hover {
+  background-color: var(--destaque-inverso);
+  color: var(--destaque);
+}
+
+/* -------------- (FIM DA SECTION CABECALHO) ------------- */
+
+main {
+  display: grid;                              /* CORPO DO SITE (EFEITO PAPEL) E ESTRUTURA DO SITE */
+
+  grid-template-columns: auto 90vw auto;           /*  */ 
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* -------------- (INICIO DA SECTION ME) ------------- */
+
+#ficha {
+  background-color: var(--fundo-card);
+  border-radius: .5rem;
+  grid-column: 2;
+  padding: 1rem;
+}
+
+#ficha .foto {
+  width: 12rem;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  outline: 5px solid var(--destaque);
+  display: block;
+  margin: auto;
+}
+
+#ficha h1 {
+  color: var(--destaque);
+  margin: 1rem 0;
+}
+
+#social {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+/* -------------- (FIM DA SECTION ME) ------------- */
+
+#detalhes {
+  grid-column: 2;
+}
+
+article {
+  background-color: var(--fundo-card);
+  border-radius: .5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+article h2 {
+  color: var(--destaque);
+  margin-bottom: 1rem;
+}
+
+/* -------------- (INICIO DA SECTION VIDEOS) ------------- */
+
+.video-container iframe {
+  width: 100%;
+  border-radius: .5rem;
+}
+
+/* -------------- (FIM DA SECTION VIDEOS) ------------- */
+
+/* -------------- (INICIO DA SECTION SKILL) ------------- */
+
+#skill-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+#skill-container .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#skill-container .nome {
+  font-weight: bold;
+  color: var(--texto);
+}
+
+#skill-content .porcent {
+  font-weight: bold;
+  color: var(--destaque);
+}
+
+#skill-container .barra {
+  width: 100%;
+  height: 8px;
+  background-color: var(--fundo-principal);
+  border-radius: .5rem;
+}
+
+#skill-container .progresso {
+  height: 100%;
+  background-color: var(--destaque-inverso);
+  border-radius: .5rem;
+}
+
+/* -------------- (FIM DA SECTION SKILL) ------------- */
+
+/* -------------- (INICIO DA SECTION FORMACAO) ------------- */
+
+#formacao-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#formacao-container .curso {
+  background-color: var(--fundo-principal);
+  border-left: 5px solid var(--destaque-inverso);
+  border-radius: .5rem;
+  padding-left: .5rem;
+  transition: border-width .5s, border-color .5s;
+}
+
+#formacao-container .curso:hover {
+  border-left-width: 1rem;
+  color: var(--destaque);
+  cursor: pointer;
+}
+
+/* -------------- (FIM DA SECTION FORMACAO) ------------- */
+
+/* -------------- (INICIO DA SECTION PROJETOS) ------------- */
+
+#projeto-container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1.5rem;
+}
+
+#projeto-container .projeto {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: var(--fundo-principal);
+  padding: .5rem;
+  border-radius: .5rem;
+  border-left: 5px solid var(--destaque-inverso);
+  transition: borde-color .5s, border-width .5s;
+}
+
+#projeto-container .projeto:hover{
+  border-color: var(--destaque);
+  border-left-width: 1rem;
+  cursor: pointer;
+}
+
+#projeto-container .foto {
+  width: 100%;
+  object-fit: cover;
+  border-radius: .5rem;
+}
+
+/* -------------- (FIM DA SECTION PROJETOS) ------------- */
+
+/* -------------- (INICIO DO FOOTER) ------------- */
+
+footer {
+  background-color: var(--destaque);
+  padding: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+  place-content: center center;
+
+  color: var(--texto-inverso);
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--texto-inverso);
+}
+
+/* -------------- (FIM D FOOTER) ------------- */
+
+@media screen and (min-width: 768px) {
+  #skill-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #projeto-container .projeto {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  #projeto-container .projeto-info {
+    max-width: 80%;
+  }
+
+  #projeto-container .foto {
+    aspect-ratio: 1/1;
+    max-width: 20%;
+    max-width: 12.5rem;
+  }
+
+}
